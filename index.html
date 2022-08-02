@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+		<title>Frontend Mentor | Social Media Dashboard</title>
+
+		<link rel="stylesheet" href="css/styles.css" />
+		<script src="js/app.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top__bg" id="topBg"></div>
+			<div class="dashboard">
+				<header class="header">
+					<div class="mastHeader title">
+						<h1>social media dashboard</h1>
+						<small class="text">total followers: 23,004</small>
+					</div>
+					<div class="theme">
+						<small class="text--theme-text">Dark mode</small>
+						<input type="checkbox" class="checkbox" id="checkbox" />
+						<label for="checkbox" class="label">
+							<div class="ball"></div>
+						</label>
+					</div>
+				</header>
+				<div class="dashboard__contents">
+					<div class="profile__cards">
+						<div class="card card--flex-col card--facebook">
+							<div class="card__header">
+								<img src="images/icon-facebook.svg" alt="" />
+								<p class="username text">@nathanf</p>
+							</div>
+							<div class="main">
+								<h1>1987</h1>
+								<p class="main__content text">Followers</p>
+							</div>
+							<div class="card__footer card__footer--up">
+								<img src="images/icon-up.svg" alt="" />
+								<p>12 Today</p>
+							</div>
+						</div>
+						<div class="card card--flex-col card--twitter">
+							<div class="card__header">
+								<img src="images/icon-twitter.svg" alt="" />
+								<p class="username text">@nathanf</p>
+							</div>
+							<div class="main">
+								<h1>1044</h1>
+								<p class="main__content text">Followers</p>
+							</div>
+							<div class="card__footer card__footer--up">
+								<img src="images/icon-up.svg" alt="" />
+								<p>99 Today</p>
+							</div>
+						</div>
+						<div class="card card--flex-col card--instagram">
+							<div class="card__header">
+								<img src="images/icon-instagram.svg" alt="" />
+								<p class="username text">@realnathanf</p>
+							</div>
+							<div class="main">
+								<h1>11k</h1>
+								<p class="main__content text">Followers</p>
+							</div>
+							<div class="card__footer card__footer--up">
+								<img src="images/icon-up.svg" alt="" />
+								<p>1099 Today</p>
+							</div>
+						</div>
+						<div class="card card--flex-col card--youtube">
+							<div class="card__header">
+								<img src="images/icon-youtube.svg" alt="" />
+								<p class="username text">Nathan F.</p>
+							</div>
+							<div class="main">
+								<h1>8239</h1>
+								<p class="main__content text">Subscribers</p>
+							</div>
+							<div class="card__footer card__footer--down">
+								<img src="images/icon-down.svg" alt="" />
+								<p>144 Today</p>
+							</div>
+						</div>
+					</div>
+					<!-- !NEXT SECTION -->
+					<div class="subHeading">
+						<h2 class="subTitle overview">Overview - Today</h2>
+					</div>
+
+					<!-- !NEXT SECTION -->
+					<div class="profile__cards">
+						<!-- 1 -->
+						<div class="card  card__small">
+							<div class="card--flex-row card__small--mb">
+								<small class="card__small--title text">page views</small>
+								<img src="images/icon-facebook.svg" alt="" />
+							</div>
+							<div class="card--flex-row">
+								<h1>87</h1>
+								<div class="card__footer card__footer--up">
+									<img src="images/icon-up.svg" alt="" />
+									<small>3%</small>
+								</div>
+							</div>
+						</div>
+						<!-- 2 -->
+						<div class="card  card__small">
+							<div class="card--flex-row">
+								<small class="card__small--title text">likes</small>
+								<img src="images/icon-facebook.svg" alt="" />
+							</div>
+							<div class="card--flex-row">
+								<h1>52</h1>
+								<div class="card__footer card__footer--down">
+									<img src="images/icon-down.svg" alt="" />
+									<small>2%</small>
+								</div>
+							</div>
+						</div>
+						<!-- 3 -->
+						<div class="card  card__small">
+							<div class="card--flex-row">
+								<small class="card__small--title text">likes</small>
+								<img src="images/icon-instagram.svg" alt="" />
+							</div>
+							<div class="card--flex-row">
+								<h1>5462</h1>
+								<div class="card__footer card__footer--up">
+									<img src="images/icon-up.svg" alt="" />
+									<small class="up">2257%</small>
+								</div>
+							</div>
+						</div>
+						<!-- 4 -->
+						<div class="card  card__small">
+							<div class="card--flex-row">
+								<small class="card__small--title text">Profile Views</small>
+								<img src="images/icon-instagram.svg" alt="" />
+							</div>
+							<div class="card--flex-row">
+								<h1>52k</h1>
+								<div class="card__footer card__footer--up">
+									<img src="images/icon-up.svg" alt="" />
+									<small class="up">1375%</small>
+								</div>
+							</div>
+						</div>
+						<!-- 5 -->
+						<div class="card  card__small">
+							<div class="card--flex-row">
+								<small class="card__small--title text">Retweets</small>
+								<img src="images/icon-twitter.svg" alt="" />
+							</div>
+							<div class="card--flex-row">
+								<h1>117</h1>
+								<div class="card__footer card__footer--up">
+									<img src="images/icon-up.svg" alt="" />
+									<small class="up">303%</small>
+								</div>
+							</div>
+						</div>
+						<!-- 6 -->
+						<div class="card  card__small">
+							<div class="card--flex-row">
+								<small class="card__small--title text">Likes</small>
+								<img src="images/icon-twitter.svg" alt="" />
+							</div>
+							<div class="card--flex-row">
+								<h1>507</h1>
+								<div class="card__footer card__footer--up">
+									<img src="images/icon-up.svg" alt="" />
+									<small class="up">553%</small>
+								</div>
+							</div>
+						</div>
+						<!-- 7 -->
+						<div class="card  card__small">
+							<div class="card--flex-row">
+								<small class="card__small--title text">Likes</small>
+								<img src="images/icon-youtube.svg" alt="" />
+							</div>
+							<div class="card--flex-row">
+								<h1>107</h1>
+								<div class="card__footer card__footer--up">
+									<img src="images/icon-up.svg" alt="" />
+									<small class="up">19%</small>
+								</div>
+							</div>
+						</div>
+						<!-- 8 -->
+						<div class="card  card__small">
+							<div class="card--flex-row ">
+								<small class="card__small--title text">Total Views</small>
+								<img src="images/icon-youtube.svg" alt="" />
+							</div>
+							<div class="card--flex-row">
+								<h1>1407</h1>
+								<div class="card__footer card__footer--up">
+									<img src="images/icon-up.svg" alt="" />
+									<small class="up">12%</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by
+				<a
+					href="https://www.linkedin.com/in/alfredthompsonovie/"
+					target="_blank"
+					>Alfred Thompson Ovie</a
+				>.
+			</div>
+		</div>
+	</body>
+</html>

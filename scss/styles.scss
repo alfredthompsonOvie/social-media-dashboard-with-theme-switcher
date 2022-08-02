@@ -1,0 +1,295 @@
+$LimeGreen: hsl(163, 72%, 41%);
+$BrightRed: hsl(356, 69%, 56%);
+
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+$Instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$YouTube: hsl(348, 97%, 39%);
+
+$ToggleGradient: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+$Toggle: hsl(230, 22%, 74%);
+
+$VeryDarkBlueBG: hsl(230, 17%, 14%);
+$VeryDarkBlueTopBGPattern: hsl(232, 19%, 15%);
+$DarkDesaturatedBlueCardBG: hsl(228, 28%, 20%);
+$DesaturatedBlueText: hsl(228, 34%, 66%);
+$WhiteText: hsl(0, 0%, 100%);
+
+$hoverBg: hsl(229, 20%, 22%);
+
+$WhiteBG: hsl(0, 0%, 100%);
+$VeryPaleBlueTopBGPattern: hsl(225, 100%, 98%);
+$LightGrayishBlueCardBG: hsl(227, 47%, 96%);
+$DarkGrayishBlueText: hsl(228, 12%, 44%);
+$VeryDarkBlueText: hsl(230, 17%, 14%);
+
+$ff: "Inter", sans-serif;
+
+$fs--OverviewCardHeadings: 0.875rem; // 14px
+$fw-sm: 400;
+$fw-bold: 700;
+
+:root {
+	box-sizing: border-box;
+}
+
+body {
+	// font-size: $fs--OverviewCardHeadings;
+	font-family: $ff;
+	background-color: $VeryDarkBlueBG;
+	color: $WhiteText;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+img {
+	max-width: 100%;
+}
+.container {
+	max-width: 1440px;
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: 0.1fr 1.8fr 0.1fr;
+	grid-template-rows: 16rem auto;
+	min-height: 100vh;
+}
+.top__bg {
+	grid-column: 1/-1;
+	grid-row: 1;
+	background-color: $VeryDarkBlueTopBGPattern;
+	border-radius: 0px 0px 20px 20px;
+	border-radius: 0 0 30px 30px;
+}
+.dashboard {
+	grid-column: 2;
+	grid-row: 1/-1;
+	max-width: 1100px;
+	width: 100%;
+	margin-inline: auto;
+	// min-height: 560px;
+	// display: grid;
+	// padding: 10px;
+}
+.header {
+	text-transform: capitalize;
+  padding: 2em 0;
+	@media (min-width: 768px) {
+		display: flex;
+		justify-content: space-between;
+    align-items: center;
+	}
+}
+.title {
+	margin-bottom: 1em;
+}
+.title h1 {
+	font-size: clamp(1.2rem, 5vw, 2rem);
+	// font-size: 1.2rem;
+	line-height: 1.3;
+}
+
+.theme {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px solid $DarkGrayishBlueText;
+  color: $WhiteText;
+
+	padding: 1em 0;
+	@media (min-width: 768px) {
+		border-top: none;
+	padding:  0;
+	}
+  // .text--theme-text{
+  //   color: $WhiteText
+  // }
+}
+.label {
+	width: 50px;
+	height: 26px;
+	background-image: linear-gradient(
+		90deg,
+		hsl(208, 92%, 53%),
+		hsl(163, 72%, 41%)
+	);
+	display: flex;
+	border-radius: 50px;
+	position: relative;
+	padding: 2px;
+}
+.ball {
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background-color: hsl(228, 28%, 20%);
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	cursor: pointer;
+	transition: all 0.3s linear;
+}
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+.checkbox:checked + .label .ball {
+	background-color: #fff;
+	transform: translateX(24px);
+}
+.theme small {
+	margin-right: 10px;
+}
+
+.text {
+	color: $DesaturatedBlueText;
+	font-weight: 400;
+}
+.subHeading {
+	margin: 2em 0;
+	// font-size: $fs--OverviewCardHeadings;
+}
+.profile__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	grid-template-rows: min-content;
+	grid-gap: 2em;
+	align-items: start;
+}
+
+.card {
+	text-align: center;
+	background-color: $DarkDesaturatedBlueCardBG;
+	border-radius: 6px;
+	padding: 2em 1em 1em;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: 0.3s all ease-in;
+	& > div {
+		margin-bottom: 1.2em;
+	}
+	&--flex-col {
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		align-items: center;
+	}
+	&--flex-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__small {
+		padding: 1.5em 1.5em 0;
+		// height: 100px;
+		&--title {
+			text-transform: capitalize;
+			font-weight: $fw-bold;
+			font-size: $fs--OverviewCardHeadings;
+		}
+		&--mb {
+			margin-bottom: 1em;
+		}
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: 0.8em;
+		.username {
+			font-size: 12px;
+		}
+	}
+	.main h1 {
+		font-size: 3rem;
+	}
+	.main__content {
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+	&__footer {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		font-size: 14px;
+		font-weight: $fw-bold;
+		&--up {
+			color: $LimeGreen;
+		}
+		&--down {
+			color: $BrightRed;
+		}
+		&--flex {
+			justify-content: space-between;
+		}
+	}
+	&:hover {
+		$hoverBg: hsl(227, 22%, 25%);
+		background-color: $hoverBg;
+		transform: translateY(-2px) scale(1.02);
+	}
+}
+
+.card--facebook {
+	border-top: 5px solid $Facebook;
+}
+.card--twitter {
+	border-top: 5px solid $Twitter;
+}
+.card--instagram::before {
+	content: "";
+	width: 100%;
+	height: 5px;
+	background-image: $Instagram;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.card--youtube {
+	border-top: 5px solid $YouTube;
+}
+
+.attribution {
+	grid-column: 2;
+	font-size: 11px;
+	text-align: center;
+  margin: 3em 0 2em;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* ===================================
+======================================
+-----------LIGHT MODE---------------
+======================================
+======================================
+*/
+$WhiteBG: hsl(0, 0%, 100%);
+$VeryPaleBlueTopBGPattern: hsl(225, 100%, 98%);
+$LightGrayishBlueCardBG: hsl(227, 47%, 96%);
+$DarkGrayishBlueText: hsl(228, 12%, 44%);
+$VeryDarkBlueText: hsl(230, 17%, 14%);
+body.light {
+	color: $VeryDarkBlueText;
+	background-color: $WhiteBG;
+}
+.top-bgLight {
+	background-color: $VeryPaleBlueTopBGPattern;
+}
+.cardLight {
+	background-color: $LightGrayishBlueCardBG;
+	color: $VeryDarkBlueText;
+}
+.cardLight:hover {
+	background-color: hsl(225, 12%, 80%);
+}
+.newText {
+	color: $DarkGrayishBlueText;
+}
