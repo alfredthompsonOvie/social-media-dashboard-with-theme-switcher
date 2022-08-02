@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![mobile preview](./screenshot.png)
+![mobile preview](./screenShot.png)
 
 
 ### Links
