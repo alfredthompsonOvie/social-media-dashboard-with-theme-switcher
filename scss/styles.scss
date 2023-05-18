@@ -39,6 +39,7 @@ body {
 	font-family: $ff;
 	background-color: $VeryDarkBlueBG;
 	color: $WhiteText;
+	transition: 0.6s all ease-in;
 }
 *,
 *::before,
@@ -64,6 +65,7 @@ img {
 	background-color: $VeryDarkBlueTopBGPattern;
 	border-radius: 0px 0px 20px 20px;
 	border-radius: 0 0 30px 30px;
+	transition: 0.6s all ease-in;
 }
 .dashboard {
 	grid-column: 2;
@@ -71,9 +73,6 @@ img {
 	max-width: 1100px;
 	width: 100%;
 	margin-inline: auto;
-	// min-height: 560px;
-	// display: grid;
-	// padding: 10px;
 }
 .header {
 	text-transform: capitalize;
@@ -89,7 +88,6 @@ img {
 }
 .title h1 {
 	font-size: clamp(1.2rem, 5vw, 2rem);
-	// font-size: 1.2rem;
 	line-height: 1.3;
 }
 
@@ -105,9 +103,6 @@ img {
 		border-top: none;
 	padding:  0;
 	}
-  // .text--theme-text{
-  //   color: $WhiteText
-  // }
 }
 .label {
 	width: 50px;
@@ -151,7 +146,6 @@ img {
 }
 .subHeading {
 	margin: 2em 0;
-	// font-size: $fs--OverviewCardHeadings;
 }
 .profile__cards {
 	display: grid;
@@ -176,7 +170,6 @@ img {
 	&--flex-col {
 		display: flex;
 		flex-direction: column;
-		// justify-content: center;
 		align-items: center;
 	}
 	&--flex-row {
@@ -186,7 +179,6 @@ img {
 	}
 	&__small {
 		padding: 1.5em 1.5em 0;
-		// height: 100px;
 		&--title {
 			text-transform: capitalize;
 			font-weight: $fw-bold;
@@ -271,11 +263,7 @@ img {
 ======================================
 ======================================
 */
-$WhiteBG: hsl(0, 0%, 100%);
-$VeryPaleBlueTopBGPattern: hsl(225, 100%, 98%);
-$LightGrayishBlueCardBG: hsl(227, 47%, 96%);
-$DarkGrayishBlueText: hsl(228, 12%, 44%);
-$VeryDarkBlueText: hsl(230, 17%, 14%);
+
 body.light {
 	color: $VeryDarkBlueText;
 	background-color: $WhiteBG;
@@ -292,4 +280,9 @@ body.light {
 }
 .newText {
 	color: $DarkGrayishBlueText;
+}
+
+
+.js-subHeading, .js-text {
+	display: inline-block;
 }

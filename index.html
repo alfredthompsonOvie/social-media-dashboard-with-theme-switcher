@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- displays site properly based on user's device -->
 
@@ -18,29 +19,39 @@
 
 		<title>Frontend Mentor | Social Media Dashboard</title>
 
+		<style>
+			.js{
+				visibility: hidden;
+			}
+		</style>
 		<link rel="stylesheet" href="css/styles.css" />
-		<script src="js/app.js" defer></script>
+
+		<script>
+			document.getElementsByTagName('html')[0].classList.add('js');
+		</script>
+		<script src="js/gsap.min.js"></script>
+		<script src="js/app.js" type="module" defer></script>
 	</head>
 	<body>
-		<div class="container">
+		<main class="container">
 			<div class="top__bg" id="topBg"></div>
-			<div class="dashboard">
+			<section class="dashboard">
 				<header class="header">
-					<div class="mastHeader title">
+					<div class="mastHeader title js-header">
 						<h1>social media dashboard</h1>
-						<small class="text">total followers: 23,004</small>
+						<small class="text js__text">total followers: 23,004</small>
 					</div>
-					<div class="theme">
-						<small class="text--theme-text">Dark mode</small>
+					<div class="theme js-theme">
+						<small class="text--theme-text">Light mode</small>
 						<input type="checkbox" class="checkbox" id="checkbox" />
 						<label for="checkbox" class="label">
 							<div class="ball"></div>
 						</label>
 					</div>
 				</header>
-				<div class="dashboard__contents">
-					<div class="profile__cards">
-						<div class="card card--flex-col card--facebook">
+				<section class="dashboard__contents">
+					<section class="profile__cards">
+						<div class="card card--flex-col card--facebook js-card__main">
 							<div class="card__header">
 								<img src="images/icon-facebook.svg" alt="" />
 								<p class="username text">@nathanf</p>
@@ -54,7 +65,7 @@
 								<p>12 Today</p>
 							</div>
 						</div>
-						<div class="card card--flex-col card--twitter">
+						<div class="card card--flex-col card--twitter js-card__main">
 							<div class="card__header">
 								<img src="images/icon-twitter.svg" alt="" />
 								<p class="username text">@nathanf</p>
@@ -68,7 +79,7 @@
 								<p>99 Today</p>
 							</div>
 						</div>
-						<div class="card card--flex-col card--instagram">
+						<div class="card card--flex-col card--instagram js-card__main">
 							<div class="card__header">
 								<img src="images/icon-instagram.svg" alt="" />
 								<p class="username text">@realnathanf</p>
@@ -82,7 +93,7 @@
 								<p>1099 Today</p>
 							</div>
 						</div>
-						<div class="card card--flex-col card--youtube">
+						<div class="card card--flex-col card--youtube js-card__main">
 							<div class="card__header">
 								<img src="images/icon-youtube.svg" alt="" />
 								<p class="username text">Nathan F.</p>
@@ -96,16 +107,18 @@
 								<p>144 Today</p>
 							</div>
 						</div>
-					</div>
-					<!-- !NEXT SECTION -->
-					<div class="subHeading">
-						<h2 class="subTitle overview">Overview - Today</h2>
-					</div>
+					</section>
 
-					<!-- !NEXT SECTION -->
-					<div class="profile__cards">
+					<section class="subHeading">
+						<h2 class="subTitle overview">
+							<span class="js-subHeading">Overview</span> 
+							<span class="js-subHeading">-</span> 
+							<span class="js-subHeading">Today</span></h2>
+					</section>
+
+					<section class="profile__cards">
 						<!-- 1 -->
-						<div class="card  card__small">
+						<div class="card  card__small js-card__small">
 							<div class="card--flex-row card__small--mb">
 								<small class="card__small--title text">page views</small>
 								<img src="images/icon-facebook.svg" alt="" />
@@ -119,7 +132,7 @@
 							</div>
 						</div>
 						<!-- 2 -->
-						<div class="card  card__small">
+						<div class="card  card__small js-card__small">
 							<div class="card--flex-row">
 								<small class="card__small--title text">likes</small>
 								<img src="images/icon-facebook.svg" alt="" />
@@ -133,7 +146,7 @@
 							</div>
 						</div>
 						<!-- 3 -->
-						<div class="card  card__small">
+						<div class="card  card__small js-card__small">
 							<div class="card--flex-row">
 								<small class="card__small--title text">likes</small>
 								<img src="images/icon-instagram.svg" alt="" />
@@ -147,7 +160,7 @@
 							</div>
 						</div>
 						<!-- 4 -->
-						<div class="card  card__small">
+						<div class="card  card__small js-card__small">
 							<div class="card--flex-row">
 								<small class="card__small--title text">Profile Views</small>
 								<img src="images/icon-instagram.svg" alt="" />
@@ -161,7 +174,7 @@
 							</div>
 						</div>
 						<!-- 5 -->
-						<div class="card  card__small">
+						<div class="card  card__small js-card__small">
 							<div class="card--flex-row">
 								<small class="card__small--title text">Retweets</small>
 								<img src="images/icon-twitter.svg" alt="" />
@@ -175,7 +188,7 @@
 							</div>
 						</div>
 						<!-- 6 -->
-						<div class="card  card__small">
+						<div class="card  card__small js-card__small">
 							<div class="card--flex-row">
 								<small class="card__small--title text">Likes</small>
 								<img src="images/icon-twitter.svg" alt="" />
@@ -189,7 +202,7 @@
 							</div>
 						</div>
 						<!-- 7 -->
-						<div class="card  card__small">
+						<div class="card  card__small js-card__small">
 							<div class="card--flex-row">
 								<small class="card__small--title text">Likes</small>
 								<img src="images/icon-youtube.svg" alt="" />
@@ -203,7 +216,7 @@
 							</div>
 						</div>
 						<!-- 8 -->
-						<div class="card  card__small">
+						<div class="card  card__small js-card__small">
 							<div class="card--flex-row ">
 								<small class="card__small--title text">Total Views</small>
 								<img src="images/icon-youtube.svg" alt="" />
@@ -216,11 +229,11 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
+					</section>
+				</section>
+			</section>
 
-			<div class="attribution">
+			<footer class="attribution">
 				Challenge by
 				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
 					>Frontend Mentor</a
@@ -230,7 +243,12 @@
 					target="_blank"
 					>Alfred Thompson Ovie</a
 				>.
-			</div>
-		</div>
+			</footer>
+		</main>
+		<script>
+			window.onload = ()=>{
+				document.getElementsByTagName('html')[0].classList.remove('js');
+			}
+		</script>
 	</body>
 </html>

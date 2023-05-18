@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [repo link](https://github.com/alfredthompsonOvie/social-media-dashboard-with-theme-switcher)
-- Live Site URL: [Add live site URL here](https://eivo-social-media-dashboard-with-theme-switcher.netlify.app)
+- Live Site URL: [live site](https://eivo-social-media-dashboard-with-theme-switcher.netlify.app)
 
 ## My process
 
@@ -54,11 +54,11 @@ I learnt how to customise the input checkbox with css
 
 ### Continued development
 
-In the futute I would love to rebuid this project using vue.js. 
+In the future I would love to rebuid this project using vue.js. 
 
 ## Author
 
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/alfredthompsonOvie)
-- Twitter - [@yourusername](https://www.twitter.com/Eivo_official)
+- Frontend Mentor - [@alfredthompsonovie](https://www.frontendmentor.io/profile/alfredthompsonOvie)
+- Twitter - [@Eivo_official](https://www.twitter.com/Eivo_official)
 
